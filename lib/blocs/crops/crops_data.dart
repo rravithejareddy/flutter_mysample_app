@@ -1,0 +1,274 @@
+import 'package:flutter_sample_app/models/crop.dart';
+
+List<Object> cropsData = [{
+  "zipcode": 518405,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "vipanagandla",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "redGram",
+  "fk_farmer_id": "1234"
+}, {
+  "zipcode": 518405,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "bhairapuram",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+  "zipcode": 518405,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "chintalapalle",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518405,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "midthur",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518405,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "cherukucherla",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518401,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "nandikotkur",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518401,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "mandlem",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518401,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "bhairapuram",
+  "quantity": 300,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "chickpea",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518401,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "kodidela",
+  "quantity": 500,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "chiqpea",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518401,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "tangadancha",
+  "quantity": 12000,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "redGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518405,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "tartur",
+  "quantity": 1200,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518402,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "muchumarri",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518402,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "raitupalle",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518402,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "laxmapuram",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518402,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "ganapuram",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518402,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "M ganapuram",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518402,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "taitpadu",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518406,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "banglow",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518406,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "parumanchala",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518406,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "pamulapadu",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}, {
+
+  "zipcode": 518406,
+  "fk_village_id": "5f2d78023962bf26682d30a8",
+  "adminLevel1": "andhraPradesh",
+  "adminLevel2": "kurnool",
+  "countryCode": "IN",
+  "villageName": "tummaluru",
+  "quantity": 100,
+  "grade": 3,
+  "cropType": "pulses",
+  "cropName": "greenGram",
+  "fk_farmer_id": "1234"
+}
+];
