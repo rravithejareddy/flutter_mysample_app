@@ -1,13 +1,9 @@
-
-import 'package:flutter_sample_app/widgets/card_list_item.dart';
 import 'package:flutter_sample_app/widgets/check_box_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_sample_app/blocs/crops/crops.dart';
 import 'package:flutter_sample_app/blocs/filtered_crops/filtered_crops.dart';
 import 'package:flutter_sample_app/models/crop.dart';
 import 'package:flutter_sample_app/models/filter.dart';
-
 
 class CropSearchPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -38,7 +34,6 @@ class CropSearchPage extends StatelessWidget {
             if (state is FilteredCropsLoadInProgress) {
               return buildLoading();
             } else if (state is FilteredCropsLoadSuccess) {
-
               return buildDashboard(state.filteredCrops);
             } else {
               return buildLoading();
@@ -46,23 +41,25 @@ class CropSearchPage extends StatelessWidget {
           },
         ),
       ),
-      endDrawer: Drawer(child:
-          BlocBuilder<FilteredCropsBloc, FilteredCropsState>(
-              key: key,
-              builder: (context, state) {
-
-        if (state is FilteredCropsLoadSuccess) {
-          return CheckBoxList(
-              onSelected: (Filter filter) => {
-                    BlocProvider.of<FilteredCropsBloc>(context)
-                        .add(FilterUpdated(filter))
-                  },
-              filter: state.filter);
-        }
-        else{
-          return buildLoading();
-        }
-      })),
+      endDrawer: Drawer(
+        child: BlocBuilder<FilteredCropsBloc, FilteredCropsState>(
+          key: key,
+          builder: (context, state) {
+            if (state is FilteredCropsLoadSuccess) {
+              return CheckBoxList(
+                onSelected: (Filter filter) => {
+                  BlocProvider.of<FilteredCropsBloc>(context).add(
+                    FilterUpdated(filter),
+                  )
+                },
+                filter: state.filter,
+              );
+            } else {
+              return buildLoading();
+            }
+          },
+        ),
+      ),
 
       // Disable opening the end drawer with a swipe gesture.
       endDrawerEnableOpenDragGesture: false,
@@ -76,18 +73,18 @@ class CropSearchPage extends StatelessWidget {
   }
 
   Widget buildDashboard(List<Crop> crops) {
-    // TODO: implement build
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 16),
-        // alignment: Alignment.center,
-        child: CustomScrollView(
-          slivers: <Widget>[
-            //  SearchForm(),
-            sliverApp(),
-            horizontalScroll(crops),
-            bodyList(crops)
-          ],
-        ));
+      padding: EdgeInsets.symmetric(vertical: 16),
+      // alignment: Alignment.center,
+      child: CustomScrollView(
+        slivers: <Widget>[
+          //  SearchForm(),
+          sliverApp(),
+          horizontalScroll(crops),
+          bodyList(crops)
+        ],
+      ),
+    );
   }
 
   Widget postCard(BuildContext context, Crop crop) {
@@ -98,7 +95,7 @@ class CropSearchPage extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
-                   // return VillageListPage(zipcode: crop.zipcode);
+                    // return VillageListPage(zipcode: crop.zipcode);
                   },
                 ),
               );
